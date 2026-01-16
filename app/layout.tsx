@@ -3,11 +3,12 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://programmatic-seo-blog.vercel.app"),
   title: {
     default: "Punisher SEO Blog",
     template: "%s | Punisher SEO",
   },
-  description: "SEO, Blogging, AI and Next.js growth experiments.",
+  description: "SEO, Next.js, Programmatic SEO, and Growth Engineering experiments.",
 };
 
 export default function RootLayout({
