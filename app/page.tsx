@@ -4,8 +4,33 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "SEO + Next.js Growth Engineering | Programmatic SEO Journey",
   description:
-    "A public journey into SEO, Next.js, Programmatic SEO, and Growth Engineering. Learn how scalable content systems are built for rankings, performance, and real growth.",
+    "A public journey into modern SEO using Next.js App Router, Server Rendering, Programmatic SEO, and performance-first architecture.",
+  openGraph: {
+    title: "SEO + Next.js Growth Engineering",
+    description:
+      "Learn modern SEO with Next.js, Programmatic SEO and scalable content systems.",
+    url: "https://programmatic-seo-blog.vercel.app/",
+    siteName: "Punisher SEO",
+    images: [
+      {
+        url: "/images/seo-nextjs-growth.png",
+        width: 1200,
+        height: 630,
+        alt: "SEO + Next.js Growth Engineering",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SEO + Next.js Growth Engineering",
+    description:
+      "Building scalable SEO content systems with Next.js and programmatic SEO.",
+    images: ["/images/seo-nextjs-growth.png"],
+  },
 };
+
 export default function Home() {
   return (
     <main className="max-w-5xl mx-auto px-6 py-12 space-y-16">
