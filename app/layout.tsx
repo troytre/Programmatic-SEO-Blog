@@ -17,6 +17,11 @@ robots: {
   index: true,
   follow: true,
 },
+
+  verification: {
+  google: "JlYDO0em6PxflEZNjkH0IvRGRJy5jeNGLWhREWjEZAY",
+},
+
 };
 
 
