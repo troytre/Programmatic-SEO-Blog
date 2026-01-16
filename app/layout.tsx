@@ -9,7 +9,18 @@ export const metadata: Metadata = {
     template: "%s | Punisher SEO",
   },
   description: "SEO, Next.js, Programmatic SEO, and Growth Engineering experiments.",
+
+  alternates: {
+  canonical: "https://programmatic-seo-blog.vercel.app/",
+},
+robots: {
+  index: true,
+  follow: true,
+},
 };
+
+
+
 
 export default function RootLayout({
   children,
