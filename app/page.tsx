@@ -132,7 +132,7 @@ export default function Home() {
           href="/blog"
           className="inline-block mt-4 px-6 py-3 rounded-lg bg-white text-black font-semibold hover:opacity-90"
         >
-          Read the Blog →
+          Read More →
         </a>
       </section>
 
