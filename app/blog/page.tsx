@@ -1,35 +1,23 @@
-import type { Metadata } from "next";
+import { posts } from "@/lib/blogData";
 import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "SEO Blog Articles",
-  description: "All SEO experiments, tutorials and daily learnings.",
-};
-
-const posts = [
-  {
-    slug: "day-1-seo-nextjs",
-    title: "Day 1: Why SEO + Next.js?",
-  },
-];
 
 export default function BlogPage() {
   return (
-    <main className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold">Blogs</h1>
+    <main className="max-w-5xl mx-auto p-6">
+      <h1 className="text-3xl font-bold mb-8">Blogs</h1>
 
-      <ul className="mt-6 space-y-4">
+      <div className="grid md:grid-cols-2 gap-6">
         {posts.map((post) => (
-          <li key={post.slug}>
-            <Link
-              href={`/blog/${post.slug}`}
-              className="text-blue-600 underline"
-            >
-              {post.title}
-            </Link>
-          </li>
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className="block border border-gray-700 rounded-lg p-6 hover:border-blue-500"
+          >
+            <h2 className="text-xl font-bold">{post.title}</h2>
+            <p className="text-gray-400 mt-2">{post.description}</p>
+          </Link>
         ))}
-      </ul>
+      </div>
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://programmatic-seo-blog.vercel.app"),
@@ -21,7 +21,6 @@ robots: {
   verification: {
   google: "JlYDO0em6PxflEZNjkH0IvRGRJy5jeNGLWhREWjEZAY",
 },
-
 };
 
 
