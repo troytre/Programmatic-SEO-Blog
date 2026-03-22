@@ -1,8 +1,9 @@
 export const blogs = [
-  { slug: "day-1-seo-nextjs" },
+  { slug: "nextjs-seo-setup" },
   { slug: "nextjs-metadata-guide" },
-  { slug: "sitemap-robots-setup" },
-  { slug: "ssr-vs-ssg-isr" },
-  { slug: "google-index-case-study" },
+  { slug: "nextjs-sitemap-robots" },
+  { slug: "ssg-ssr-isr-nextjs" },
+  { slug: "google-indexing-case-study" },
   { slug: "programmatic-seo-nextjs" },
+  { slug: "nextjs-hydration-errors" },
 ];
