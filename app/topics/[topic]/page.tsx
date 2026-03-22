@@ -1,4 +1,4 @@
-import { posts } from "@/lib/blogData";
+import { blogs } from "@/lib/blogs";
 import Link from "next/link";
 
 export default function TopicPage({
@@ -6,7 +6,7 @@ export default function TopicPage({
 }: {
   params: { topic: string };
 }) {
-  const topicPosts = posts.filter(
+  const topicPosts = blogs.filter(
     (post) => post.topic === params.topic
   );
 
