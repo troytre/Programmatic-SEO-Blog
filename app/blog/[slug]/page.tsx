@@ -1,5 +1,11 @@
 import { posts } from "@/lib/blogData";
 import Link from "next/link";
+import { blogSlugs } from "@/lib/blogs";
+
+export function generateStaticParams() {
+  return blogSlugs.map((slug) => ({ slug }));
+}
+
 
 export default async function BlogPost({
   params,

@@ -1,7 +1,13 @@
 import { MetadataRoute } from "next";
+import { blogSlugs } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://programmatic-seo-blog.vercel.app";
+
+  const blogUrls = blogSlugs.map((slug) => ({
+    url: `${base}/blog/${slug}`,
+    lastModified: new Date(),
+  }));
 
   return [
     {
@@ -12,9 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${base}/blog`,
       lastModified: new Date(),
     },
-    {
-      url: `${base}/blog/day-1-seo-nextjs`,
-      lastModified: new Date(),
-    },
+    ...blogUrls,
   ];
 }
