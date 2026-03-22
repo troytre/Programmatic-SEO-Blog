@@ -11,23 +11,21 @@ export default function TopicPage({
   );
 
   return (
-    <main className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold capitalize mb-6">
-        {params.topic} Articles
+    <div className="p-6">
+      <h1 className="text-2xl font-bold mb-4">
+        Topic: {params.topic}
       </h1>
 
-      <ul className="space-y-4">
-        {topicPosts.map((post) => (
-          <li key={post.slug}>
-            <Link
-              href={`/blog/${post.slug}`}
-              className="text-blue-600 underline"
-            >
-              {post.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </main>
+      {topicPosts.map((post) => (
+        <div key={post.slug}>
+          <Link
+            href={`/blog/${post.slug}`}
+            className="text-blue-500 underline"
+          >
+            {post.title}
+          </Link>
+        </div>
+      ))}
+    </div>
   );
 }
