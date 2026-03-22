@@ -1,6 +1,6 @@
 export const blogs = [
   {
-    slug: "day-1-seo-nextjs",
+    slug: "nextjs-seo-setup",
     title: "Complete Next.js SEO Setup",
     content: "Full guide on Next.js SEO...",
     topic: "seo",
