@@ -1,19 +1,19 @@
 import { posts } from "@/lib/blogData";
 import Link from "next/link";
-import { blogSlugs } from "@/lib/blogs";
+import { blogs } from "@/lib/blogs";
 
 export function generateStaticParams() {
-  return blogSlugs.map((slug) => ({ slug }));
+  return blogs.map((blog) => ({
+    slug: blog.slug,
+  }));
 }
 
-
-export default async function BlogPost({
+export default function BlogPost({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }) {
-  // ✅ FIX: await params
-  const { slug } = await params;
+  const { slug } = params;
 
   const post = posts.find((p) => p.slug === slug);
 
@@ -37,7 +37,6 @@ export default async function BlogPost({
         {post.content}
       </p>
 
-      {/* Topic */}
       <p className="mt-6">
         Topic:{" "}
         <Link
@@ -48,7 +47,6 @@ export default async function BlogPost({
         </Link>
       </p>
 
-      {/* Related */}
       <div className="mt-10">
         <h2 className="text-xl font-bold mb-4">Related Posts</h2>
 
