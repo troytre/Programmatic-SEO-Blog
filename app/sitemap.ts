@@ -1,5 +1,8 @@
 import { MetadataRoute } from "next";
-import { blogSlugs } from "@/lib/blog";
+
+const blogSlugs = [
+  "day-1-seo-nextjs",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://programmatic-seo-blog.vercel.app";
