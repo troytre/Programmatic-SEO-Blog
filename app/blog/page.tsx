@@ -1,4 +1,4 @@
-import { posts } from "@/lib/blogData";
+import { blogs } from "@/lib/blogs";
 import Link from "next/link";
 
 export default function BlogPage() {
@@ -7,14 +7,17 @@ export default function BlogPage() {
       <h1 className="text-3xl font-bold mb-8">Blogs</h1>
 
       <div className="grid md:grid-cols-2 gap-6">
-        {posts.map((post) => (
+        {blogs.map((post) => (
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
             className="block border border-gray-700 rounded-lg p-6 hover:border-blue-500"
           >
             <h2 className="text-xl font-bold">{post.title}</h2>
-            <p className="text-gray-400 mt-2">{post.description}</p>
+
+            <p className="text-gray-400 mt-2">
+              {post.content.slice(0, 80)}...
+            </p>
           </Link>
         ))}
       </div>
